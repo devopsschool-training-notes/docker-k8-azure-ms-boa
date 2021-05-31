@@ -1,0 +1,314 @@
+Rajesh Kumar
+====================
+
+
+Day 2 - Container - Docker Level - Essential
+Day 3 - Kubernetes Level - Essential
+Day 1 - Cloud - Azure Level - Essential
+Day 4 - Microservices -  SpringBoot Level - Essential
+Day 5 - Kubernetes with OpenShift and Other Pendings Level - Essential
+
+
+Start Time - 10 AM 
+END Time - 6 PM
+LUNCH - 1 PM - 2 PM
+BREAK - 20 mins.
+	11.30 AM
+	3:30 PM 
+==================================
+Lab - AZURE (I WOULD BE GIVING)
+From where to acces - RPS
+======================================
+===================================================================================
+What is Docker?
+------------------------------
+	Container mgmt tool/Platform
+
+Tool
+	Save cost
+	Save time
+	Quality & Eff
+	How??? -> During RUNNING an APPS
+----------------------------------
+What is Container?
+=====================================================
+is INDEPENT APP RUN TIME ENV.
+
+has 
+		1 USER
+			ATTACHED to
+				1 PID
+				1 MNT
+				1 NET
+
+What are the components we need to RUN 1 APP?
+===============================================
+Hardware -> OS -> DEPENDENT LIB -> APP
+=====================================================
+Hardware
+	OS
+	  Kernal
+		Namespace			NEED		ALLOWED byOS		CAN
+			USER NS			1		UNLIMITD		UNLIMITD
+			PID NS			1		1			UNLIMITD
+			MNT NS(ROOT FS) 	1		1			UNLIMITD
+			NET NS			1		1			UNLIMITD
+		Cgroups
+			Allocate CPU and RAM to APP PID
+			
+		Capa*
+			This container a USER PERMISSION.
+			USER
+			- ROOT
+			- NON ROOT
+		
+		
+APP
+	USER ID
+	PID	
+
+FileSystem
+--------------------
+Collection of file and dir for SPECIFIC PURPOSE
+- BOOT FS	- KERNAL
+- ROOT FS		
+- USER FS	
+- APP FS
+
+
+
+kernel 
+The kernel is a computer program at the core of a computer's operating system that has complete control over everything in the system.
+
+cgroups is a Linux kernel feature that limits, accounts for, and isolates the resource usage of a collection of processes.
+
+
+WHY N USER 1 PID 1 NET 1 MNT?
+===================================
+PC
+-----------
+==============================================================
+HISTORY oF COMPUTING
+=====================================================================
+DESKTOP		INTERNET
+				DATA CENTER
+				Virtual Box
+Docker Arch
+============================================
+Human --> Docker Client -----> Docker Deamon(Server) --> ContainerD ---> Kernal
+         =============================================
+			 DOCKER ENGINE
+======================================================================
+Docker Components
+1 Docker Engine	
+
+2 Docker Image
+--------------------
+ROOT FS + USER FS + APP FS
+------------------------------------
+UBUNTU + root + app(ls + httpd)
+RHEL  + root  + app(ls  + httpd)
+CENTOS  + root + app(ls  + httpd)
+WINDOWS + ADMINISTRATOR + MSSQL
+x.war
+centos + deploy + java + tomcat + x.war
+
+
+VM IMAGE?
+--------------------
+BOOT FS + ROOT FS + USER FS + APP FS
+------------------------------------
+KERNAL  + UBUNTU + root + app(ls + httpd)
+KERNAL  + RHEL  + root  + app(ls  + httpd)
+KERNAL  + CENTOS  + root + app(ls  + httpd)
+
+3. registry
+	contains.
+		- repository
+		contains
+			ROOT FS + USER FS 
+			ROOT FS + USER FS + APP FS  
+			ROOT FS + USER FS  + APP FS  + APP FS
+Kind
+	PUBLIC
+		hub.docker.com
+		google registry
+	pVT
+		artifactory
+		nexus
+
+4. Container
+
+HUMAN --> CLIENT --> SERVER
+
+		CHECK
+			IMAGE EXIST - YES
+				ContainerD ---> KERNAL
+							Create ONE USER
+							CREATE ONE NETWORK
+							CREATE ONE PID
+							CREATE ONE MOUNT of RFS FROM DOCKER IMAGE
+							ATTACH MOUNT - NET - PID to USER
+			
+			IMAGE EXIST - NO
+				DOCKER SERVER DOWNLOAD FROM HUB
+
+					ContainerD ---> KERNAL
+							Create ONE USER
+							CREATE ONE NETWORK
+							CREATE ONE PID
+							CREATE ONE MOUNT of RFS FROM DOCKER IMAGE
+							ATTACH MOUNT - NET - PID to USER
+
+
+
+
+
+
+How to install docker?
+============================
+https://devopsschool.com/tutorial/docker/install-config/index.html
+
+65.0.182.213
+ubuntu
+ubuntu123
+
+3.6.89.99
+ubuntu
+ubuntu123
+
+
+
+
+
+    3  docker
+    4  apt install docker.io
+    5  apt-get update
+    6  apt install docker.io
+    7  clear
+    8  docker
+    9  clear
+   10  which docker
+   11  which dockerd
+   12  ps -eaf | grep docker
+   13  docker container
+   14  clear
+   15  docker containerd
+   16  which containerd
+   17  ps -eaf | grep containerd
+   18  clear
+   19  docker -v
+   20  docker info
+   21  clear
+   22  docker images
+   23  docker ps
+   24  docker ps -a
+   25  docker -h
+   26  clear
+   27  ls
+   28  history
+
+
+Container LifeCycle
+============================================================================
+create -> start -> stop -> start -> restart -> pause -> unpause -> kill->  remove
+
+
+Vms LifeCycle
+============================================================================
+create -> start -> stop -> start -> restart -> pause -> unpause -> kill->  remove
+
+  28  history
+   29  clear
+   30  docker create jenkins/jenkins
+   31  docker pull jenkins/jenkins
+   32  clear
+   33  docker images
+   34  docker ps
+   35  docker ps -a
+   36  docker create jenkins/jenkins
+   37  docker ps -a
+   38  docker start 7a9ba3bfb524
+   39  docker ps -a
+   40  docker ps
+   41  docker stop 7a9ba3bfb524
+   42  docker ps
+   43  docker ps -a
+   44  docker start 7a9ba3bfb524
+   45  docker ps -a
+   46  docker restart 7a9ba3bfb524
+   47  docker ps -a
+   48  docker pause 7a9ba3bfb524
+   49  docker ps -a
+   50  docker unpause 7a9ba3bfb524
+   51  docker ps -a
+   52  docker rm 7a9ba3bfb524
+   53  docker kill 7a9ba3bfb524
+   54  docker rm 7a9ba3bfb524
+   55  clear
+   56  history
+
+
+Assignment
+=====================
+Diff between DOCKER stop and DOCKER kill
+Diff between Docker pause and docker unpause
+
+jenkins/jenkins
+=======================
+fedora + java + jenkins
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
