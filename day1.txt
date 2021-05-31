@@ -311,25 +311,28 @@ curl http://172.17.0.2:8080
 
 
 How to access from outside?
+=================================================
+docker run -d jenkins/jenkins
+docker run -d  -p NODE:CONT jenkins/jenkins
+docker run -d  -p 8080:8080 jenkins/jenkins
+docker run -d  -p 8081:8080 jenkins/jenkins
+docker run -d  -p 8082:8080 jenkins/jenkins
+
+ 215  docker network create --subnet=172.19.0.0/16 qa
+  216  docker network ls
+  217  docker run -itd --ip 172.19.0.5 --net=qa jenkins/jenkins
+  218  docker inspect fb7547963d20fb8f3265b4c2399954d5f4f49b9c0cc45119e18af05afe686a5c
 
 
+RUN
+===========================================
+pull + create + start + attach
 
+RUN -d
+===========================================
+pull + create + start + DO NOT attach
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+13.234.114.146
 
 
 
