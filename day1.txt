@@ -169,11 +169,11 @@ How to install docker?
 ============================
 https://devopsschool.com/tutorial/docker/install-config/index.html
 
-65.0.182.213
+65.0.182.213  - A - M
 ubuntu
 ubuntu123
 
-3.6.89.99
+3.6.89.99	N - Z
 ubuntu
 ubuntu123
 
@@ -257,9 +257,60 @@ Diff between Docker pause and docker unpause
 jenkins/jenkins
 =======================
 fedora + java + jenkins
+=============================================================
+PHYSCIAL SERVER 	VIRTUAL SERVER		Container 
+IS RUNNING 		IS RUNNING 		IS RUNNING 
+COZ OF			COZ OF			COZ OF
+PID 1 is RUNNING	PID 1 is RUNNING	PID 1 is RUNNING	
+
+PID 1 IS SYSTEMD/INIT	PID 1 IS SYSTEMD/INIT	PID 1 can be anything
+						ls
+						/bin/bash
+						script.sh
+						a
+						b
+						ANY EXECUTABLE
 
 
+How to use container?
+============================
+Go inside
+- exec
+	this would execute an exectuable inside a container.'
+	with -it and /bin/bash - you can go inside a containr
 
+   25  docker exec cfe3b4c6aac7 ls
+   26  clear
+   27  docker ps
+   28  docker exec -it cfe3b4c6aac7 /bin/bash
+
+
+- attach
+	this command would attach you to PID 1.
+curl http://172.17.0.2:8080
+
+   34  docker ps
+   35  docker inspect cfe3b4c6aac7
+   36  clear
+   37  docker ps
+   38  dcoker attach cfe3b4c6aac7
+   39  docker attach cfe3b4c6aac7
+   40  clear
+   41  ls
+   42  docker create httpd
+   43  docker start httpd
+   44  docker start 48bae0ac5d0d75168f1c1282c0eb21b43302cb1b5c5dc9fa3b4a758ccfb36fe9
+   45  docker ps -a
+   46  clear
+   47  docker start a4d33f7be11c
+   48  docker ps
+   49  docker inspect a4d33f7be11c
+   50  clear
+   51  curl http://172.17.0.2
+   52  docker attach a4d33f7be11c
+
+
+How to access from outside?
 
 
 
