@@ -1,0 +1,162 @@
+A - M - 13.232.206.198
+N - Z - 13.234.78.60
+====================================
+What is Docker?
+What is Container?
+Why COntainer?
+How to install Docker?
+Docker Arch?
+Container Lifecycle? - Work with container
+How to use container?
+==================================
+Creating an image
+	- 2
+Sharing an image
+Docker Volume
+Docker networking
+==================================
+What is an Image?
+	- is a Repo
+		Contains - Collection of Filesystem(S) == AKA layer
+-------------------
+ROOT FS + USER FS + APP FS
+------------------------------------
+UBUNTU + root + app(ls + httpd)
+RHEL  + root  + app(ls  + httpd)
+CENTOS  + root + app(ls  + httpd)
+WINDOWS + ADMINISTRATOR + MSSQL
+x.war
+centos + deploy + java + tomcat + x.war
+
+Collection of file and dir for SPECIFIC PURPOSE
+- BOOT FS	- KERNAL
+- ROOT FS		
+- USER FS	
+- APP FS
+==========================
+Install 
+	UBUNTU	 - 1	- 3
+	git	- 2
+	apache2 - 3
+====================
+Image name - yourfirstname
+
+ 810  clear
+  811  docker images
+  812  docker history jenkins/jenkins
+  813  clear
+  814  df -kh
+  815  docker run -d jenkins/jenkins
+  816  df -kh
+  817  docker stop 90c5a8eeab6f6477845314f2472bbcd726f3c99d572b034268956be0596ba7cf
+  818  df -kh
+  819  docker start 90c5a8eeab6f6477845314f2472bbcd726f3c99d572b034268956be0596ba7cf
+  820  df -kh
+  821  clear
+  822  df -kh
+  823  cd /var/lib/docker/overlay2/a5807fe3d3b2b28497ec37590bfddcdc007ef0a9c304dd446ebe8e98054c28a5/merged
+  824  ls
+  825  cd /var/lib/docker/
+  826  clear
+  827  ls
+  828  cd containers
+  829  ls
+  830  du -sh .
+  831  cd ..
+  832  ls
+  833  cd overlay2
+  834  clear
+  835  ls
+  836  clear
+  837  cd f0d47453a8d020001316d5d01e62afb31d71c681ea6de7ea272a8ed8d5055da5
+  838  ls
+  839  cd diff/
+  840  ls
+  841  cd
+  842  clear
+  843  ls
+  844  docker ps
+  845  docker exec -it 90c5a8eeab6f /bin/bash
+  846  pwd
+  847  cd /var/lib/docker/
+  848  find . -name devopsschool.txt
+  849  cd ./overlay2/a5807fe3d3b2b28497ec37590bfddcdc007ef0a9c304dd446ebe8e98054c28a5/diff/
+  850  ls
+  851  clear
+  852  ls
+  853  ls tmp/
+  854  exit
+  855  docker ps -a
+  856  docke stop 90c5a8eeab6f
+  857  docker stop 90c5a8eeab6f
+  858  clear
+  859  docker rm 90c5a8eeab6f
+  860  docker ps -a
+  861  docker images
+  862  docker rmi jenkins/jenkins httpd tomcat
+  863  clear
+  864  ls
+  865  docker images
+  866  cd /var/lib/docker/overlay2/
+  867  ls
+  868  du -h --max-depth=1
+  869  clear
+  870  docker os
+  871  docker images
+  872  docker run -itd ubuntu
+  873  docker ps
+  874  docker exec 5385d7c97ee4 git
+  875  docker attach 5385d7c97ee4
+  876  clear
+  877  ls
+  878  du -sh 207c6862ad437026e78084069a3dc2dff2b8cfce2450c9736277b64d3e0f910c
+  879  clear
+  880  ls
+  881  cd 207c6862ad437026e78084069a3dc2dff2b8cfce2450c9736277b64d3e0f910c
+  882  ls
+  883  cd diff
+  884  ls
+  885  cd ..
+  886  ls
+  887  du -sh diff/
+  888  clear
+  889  cd
+  890  cd /var/lib/docker/overlay2
+  891  ls
+  892  docker ps
+  893  docker history ubuntu
+  894  docker inspect ubuntu
+  895  clear
+  896  docker ps
+  897  docker commit -a"Rajesh Kumar" -m"ub+up+git" 5385d7c97ee4 ub-up-git
+  898  docker images
+  899  docker history ub-up-git
+  900  ls
+  901  clea
+  902  clear
+  903  docker ps
+  904  docker stop 5385d7c97ee4
+  905  docker rm 5385d7c97ee4
+  906  docker ps
+  907  docker images
+  908  docker run -itd ub-up-git
+  909  docker ps
+  910  docker exec 763f7fac209e git
+  911  clear
+  912  docker images
+  913  docker run -itd ubuntu
+  914  docker ps
+  915  docker exec 9082b2b299cc git
+  916  df -kh
+  917  clear
+  918  history
+
+
+
+
+
+
+
+
+
+
