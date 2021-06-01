@@ -152,10 +152,25 @@ Image name - yourfirstname
   918  history
 
 
+====================
+Step 1 - Register FREE at hub.docker.com
 
 
+docker login
+docker tag ub-up-git devopsschools/tuesdayjune2021
+docker push devopsschools/tuesdayjune2021
 
 
+  954  docker ps
+  955  clear
+  956  docker ps
+  957  clear
+  958  docker commit -a"Rajesh" -m"demo" f9660d96988d devopsschools/tuesdayjune2021:v1
+  959  docker commit -a"Rajesh" -m"demo" f9660d96988d devopsschools/tuesdayjune2021:v2
+  960  docker commit -a"Rajesh" -m"demo" f9660d96988d devopsschools/tuesdayjune2021:v3
+  961  docker images
+  962  docker push devopsschools/tuesdayjune2021:v1
+  963  docker push devopsschools/tuesdayjune2021:v2
 
 
 
