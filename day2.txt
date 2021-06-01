@@ -171,6 +171,45 @@ docker push devopsschools/tuesdayjune2021
   961  docker images
   962  docker push devopsschools/tuesdayjune2021:v1
   963  docker push devopsschools/tuesdayjune2021:v2
+===========================================================
+
+Using Dockerfile
+-----------------------
+	- List of Instructions 
+			for creating Layers.
+
+RULE - one line ====== one layer
+----------------------
+FROM ubuntu
+RUN apt-get update 
+RUN DEBIAN_FRONTEND="noninteractive" apt-get -y install tzdata
+RUN apt-get install git -y && apt-get install apache2 -y
+RUN touch /opt/devopst
+ENV APP_HOME /opt/ramukaka
+ADD index.html /tmp
+=====================================
+docker build -t rajesh .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
