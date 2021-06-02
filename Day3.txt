@@ -383,6 +383,12 @@ spec:
     image: nginx
     ports:
     - containerPort: 80
+  - name: hello-ctr1
+    image: jenkins/jenkins
+    ports:
+    - containerPort: 8080
+
+
 
 =====================================
 
