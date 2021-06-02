@@ -217,6 +217,59 @@ Workstation - 3.108.63.229
 User - centos
 Password - centos123
 
+================================================================
+
+
+
+CRUD
+================================
+	Create
+		CMD
+			create
+		YAML		
+			create -f
+
+	READ
+		CMD
+			get 
+		YAML	
+			NA
+
+
+	UPDATE
+		CMD
+			edit
+		YAML
+			apply -f
+
+	DELETE		
+		CMD
+			delete
+		YAML
+			delete -f
+
+
+
+
+  1  kubectl
+    2  clear
+    3  kubectl create ns dev
+    4  kubectl get ns
+    5  kubectl create ns qa
+    6  kubectl get ns
+    7  kubectl describe ns dev
+    8  kubectl edit ns dev
+    9  kubectl describe ns dev
+   10  kubectl delete ns dev
+   11  history
+
+
+
+
+
+
+
+
 
 
 
