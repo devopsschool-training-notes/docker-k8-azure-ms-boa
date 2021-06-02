@@ -262,14 +262,134 @@ CRUD
     9  kubectl describe ns dev
    10  kubectl delete ns dev
    11  history
+==================================================
+
+CRUD
+================================
+	Create
+		CMD
+			create
+		YAML		
+			create -f
+
+	READ
+		CMD
+			get 
+		YAML	
+			NA
 
 
+	UPDATE
+		CMD
+			edit
+		YAML
+			apply -f
+
+	DELETE		
+		CMD
+			delete
+		YAML
+			delete -f
 
 
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: <insert-namespace-name-here>
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-pod
+
+spec:
+  containers:
+  - name: hello-ctr
+    image: nginx
+    ports:
+    - containerPort: 80
 
 
+ 12  kubectl create -h
+   13  clear
+   14  l
+   15  ls
+   16  clear
+   17  ls
+   18  vi pod.yaml
+   19  clear
+   20  kubectl get ns
+   21  clear
+   22  kubectl get pods --all-namesapces
+   23  kubectl get pods --all-namespaces
+   24  clear
+   25  kubectl get pods --all-namespaces
+   26  clear
+   27  ls
+   28  kubectl create -f pod.yaml
+   29  vi pod.yaml
+   30  kubectl create -f pod.yaml
+   31  kubectl get pods
+   32  kubectl get pods -n=dev
+   33  kubectl create ns rajesh
+   34  clear
+   35  kubectl get pods -n=rajesh
+   36  kubectl get pods
+   37  vi pod.yaml
+   38  kubectl create -f pod.yaml
+   39  vi pod.yaml
+   40  kubectl create -f pod.yaml
+   41  kubectl apply -f pod.yaml
+   42  clear
+   43  kubectl get pods
+   44  kubectl create -f pod.yaml
+   45  kubectl create -f pod.yaml -n=rajesh
+   46  kubectl get pods
+   47* kubectl get pods
+   48  kubectl get pods -n=rajesh,default
+   49  kubectl get pods -n=rajesh default
+   50  kubectl get pods --all-namespaces
+   51  clear
+   52  ls
+   53  kubectl get pods
+   54  kubectl edit pod hello-pod -n=rajesh
+   55  kubectl desribe pod hello-pod -n=rajesh
+   56  kubectl describe pod hello-pod -n=rajesh
+   57  clear
+   58  ls
+   59  kubectl get pods -n=rajesh
+   60  kubectl get pods -n=rajesh -o wide
+   61  kubectl
+   62  kubectl get
+   63  kubectl get -h
+   64  clear
+   65  kubectl get -h
+   66  clear
+   67  kubectl get pods
+   68  kubectl delete pod hello-pod
+   69  kubectl delete -f pod.yaml -n=rajesh
+   70  history
+============================
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-pod-jenkins
 
+spec:
+  containers:
+  - name: hello-ctr
+    image: nginx
+    ports:
+    - containerPort: 80
 
+=====================================
+
+PS			Conainer
+
+APP			Dockerimage
+APP CONFIG file		docker app file
 
 
 
