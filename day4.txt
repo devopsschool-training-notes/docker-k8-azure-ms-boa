@@ -234,8 +234,52 @@ curl http://ip
 kubectl delete deploy my-dep -n=rajesh
 
 
+kubectl create service clusterip my-cs --tcp=5678:80 -n=rajesh
 
-
+ 1222  kubectl create service -h
+ 1223  kubectl create service clusterip -h
+ 1224  c
+ 1225  clear
+ 1226  kubectl get svc -n=rajesh
+ 1227  kubectl get svc
+ 1228  kubectl get svc -n=rajesh
+ 1229  kubectl create service clusterip my-cs --tcp=5678:80 -n=rajesh
+ 1230  kubectl get svc -n=rajesh
+ 1231  ping 10.108.108.103
+ 1232  kubectl get pods -n=rajesh
+ 1233  clear
+ 1234  ls
+ 1235  kubectl create -f svc-pod1.yaml -n=rajesh
+ 1236  kubectl create -f svc-pod2.yaml -n=rajesh
+ 1237  vi svc-pod2.yaml
+ 1238  kubectl create -f svc-pod2.yaml -n=rajesh
+ 1239  clear
+ 1240  kubectl get pods -o wide --show-labels
+ 1241  kubectl get pods -o wide --show-labels -n=rajesh
+ 1242  clear
+ 1243  kubectl get pods -o wide --show-labels -n=rajesh
+ 1244  kubectl get svc -n=rajesh --show-labels
+ 1245  kubectl describe svc my-cs -n=rajesh
+ 1246  kubectl edit svc my-cs -n=rajesh
+ 1247  clear
+ 1248  kubectl get pods -o wide --show-labels -n=rajesh
+ 1249  kubectl get svc -n=rajesh --show-labels
+ 1250  kubectl describe svc my-cs -n=rajesh
+ 1251  kubectl edit svc my-cs -n=rajesh
+ 1252  kubectl describe svc my-cs -n=rajesh
+ 1253  kubectl get svc -n=rajesh --show-labels
+ 1254  clear
+ 1255  kubectl get svc -n=rajesh --show-labels
+ 1256  curl http://10.108.108.103
+ 1257  curl http://10.108.108.103:5678
+ 1258  kubectl get pods -o wide --show-labels -n=rajesh
+ 1259  kubectl edit pod  hello-pod-jenkins-1 -n=rajesh
+ 1260  clear
+ 1261  kubectl describe svc my-cs -n=rajesh
+ 1262  kubectl get pods -o wide --show-labels -n=rajesh
+ 1263  kubectl get svc -n=rajesh --show-labels
+ 1264  clear
+ 1265  watch curl http://10.108.108.103:5678
 
 
 
