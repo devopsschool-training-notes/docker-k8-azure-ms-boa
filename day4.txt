@@ -1,0 +1,125 @@
+
+WORKER
+=========================
+52.66.241.162
+13.233.145.20
+
+WorkStation - 
+13.233.136.251
+
+=======================
+ReplicationController
+Deployment
+Services
+====================================
+scmgalaxy/nginx-devopsschoolv1
+scmgalaxy/nginx-devopsschoolv2
+========================================
+ReplicationController
+----------------------------------------
+Replication - 1 to MANY
+Controller - CONTROL YOUR DESIRE.
+------------------------------------------------------
+
+
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: hello-rc
+spec:
+  replicas: 5
+  selector:
+    app: hello-world
+  template:
+    metadata:
+      labels:
+        app: hello-world
+    spec:
+      containers:
+      - name: hello-ctr
+        image: scmgalaxy/nginx-devopsschoolv1
+        ports:
+        - containerPort: 80
+
+========================================
+
+ 1002  kubectl get nodes
+ 1003  kubectl get pods --all-namespaces
+ 1004  clear
+ 1005  ls
+ 1006  cd rajesh/
+ 1007  ls
+ 1008  vi rc.yaml
+ 1009  kubectl create -f rc.yaml -n=rajesh
+ 1010  kubetl get pods -n=rajesh
+ 1011  kubectl get pods -n=rajesh
+ 1012  clear
+ 1013  kubectl get pods -n=rajesh
+ 1014  kubectl get rc -n=rajesh
+ 1015  vi rc.yaml `
+ 1016  vi rc.yaml
+ 1017  kubectl apply -f rc.yaml -n=rajesh
+ 1018* kubectl get
+ 1019  clear
+ 1020  kubectl get rc -n=rajesh
+ 1021  kubectl edit rc hello-rc -n=rajesh
+ 1022  kubectl get rc -n=rajesh
+ 1023  kubectl get pods -n=rajesh
+ 1024  kubectl edit rc hello-rc -n=rajesh
+ 1025  kubectl get pods -n=rajesh
+ 1026  watch kubectl get pods -n=rajesh
+ 1027  kubectl edit rc hello-rc -n=rajesh
+ 1028  clear
+ 1029  watch kubectl get pods -n=rajesh
+ 1030  watch kubectl get pods -n=rajesh -o wide
+ 1031  clear
+ 1032  ls
+ 1033  kubectl get pods -n=rajesh
+ 1034  kubectl delete pod hello-rc-srltn -n=rajesh
+ 1035  kubectl get pods -n=rajesh
+ 1036  kubectl edit pod hello-rc-rjxdk -n=rajesh
+ 1037  kubectl get pods -n=rajesh
+ 1038  clear
+ 1039  kubectl edit pod hello-rc-rjxdk -n=rajesh
+ 1040  kubectl get pods -n=rajesh
+ 1041  clear
+ 1042  kubectl get pods -n=rajesh
+ 1043  clear
+ 1044  kubectl get pods -n=rajesh
+ 1045  kubectl describe pod hello-rc-rjxdk -n=rajesh
+ 1046  clear
+ 1047  kubectl get pods -n=rajesh
+ 1048  kubectl edit pod hello-rc-rjxdk -n=rajesh
+ 1049  kubectl get pods -n=rajesh
+ 1050  kubectl edit pod hello-rc-8sd9v -n=rajesh
+ 1051  kubectl get pods -n=rajesh
+ 1052  clear
+ 1053  kubectl get pods -n=rajesh
+ 1054  kubectl get rc -n=rajesh
+ 1055  kubectl describe rc hello-rc -n=rajesh
+ 1056  clear
+ 1057  kubectl get rc -n=rajesh
+ 1058  kubectl get pods -n=rajesh
+ 1059  kubectl describe pod hello-rc-xspkg -n=rajesh
+ 1060  Q
+ 1061  kubectl get pods -n=rajesh
+ 1062  kubectl describe pod hello-rc-rjxdk -n=rajesh
+ 1063  q!
+ 1064  clear
+ 1065  kubectl get pods -n=rajesh
+ 1066  clear
+ 1067  kubectl get pods -n=rajesh
+ 1068  kubectl get rc -n=rajesh
+ 1069  history
+
+
+
+
+
+
+
+
+
+
+
+
