@@ -21,6 +21,10 @@ Replication - 1 to MANY
 Controller - CONTROL YOUR DESIRE.
 ------------------------------------------------------
 
+kubectl taint node ip-172-31-1-245.ap-south-1.compute.internal node-role.kubernetes.io/master:NoSchedule-
+
+
+
 
 apiVersion: v1
 kind: ReplicationController
@@ -111,6 +115,143 @@ spec:
  1067  kubectl get pods -n=rajesh
  1068  kubectl get rc -n=rajesh
  1069  history
+===================================================
+ReplicationController ---> ReplicaSets
+
+
+Deployment
+============================================
+Replication + Controller
+------------------------
+	ReplicaSets
+
+
+Versioning
+
+Rollout
+Rollback
+==============================================================
+
+
+scmgalaxy/nginx-devopsschoolv2
+
+
+kubectl create deployment my-dep --image=scmgalaxy/nginx-devopsschoolv1 --replicas=3 -n=rajesh
+
+kubectl scale --replicas=2 deployment/my-dep -n=rajesh
+
+
+kubectl rollout history deployment/my-dep -n=rajesh
+
+ 1091  kubectl create
+ 1092  clear
+ 1093  kubectl create deploy -h
+ 1094  clear
+ 1095  ls
+ 1096  kubectl create deployment my-dep scmgalaxy/nginx-devopsschoolv1 --replicas=3 -n=rajesh
+ 1097  clear
+ 1098  kubectl get deploy -n=rajesh
+ 1099  kubectl create deployment my-dep --image=scmgalaxy/nginx-devopsschoolv1 --replicas=3 -n=rajesh
+ 1100  kubectl get deploy -n=rajesh
+ 1101  kubectl get pods -n=rajesh
+ 1102  kubectl delete rc hello-rc -n=rajesh
+ 1103  kubectl delete rc hello-rc-c -n=rajesh
+ 1104  clear
+ 1105  kubectl get rc -n=rajesh
+ 1106  kubectl get pods -n=rajesh
+ 1107  kubectl delete pod hello-rc-c-7xdm7 hello-rc-rjxdk -n=rajesh
+ 1108  clear
+ 1109  ls
+ 1110  kubectl get pods -n=rajesh
+ 1111  kubectl get deploy -n=rajesh
+ 1112  kubectl edit deploy my-dep -n=rajesh
+ 1113  kubectl get deploy -n=rajesh
+ 1114  clear
+ 1115  kubectl get deploy -n=rajesh
+ 1116  kubectl get pod -n=rajesh
+ 1117  kubectl delete pod my-dep-747b4ffb56-7268m my-dep-747b4ffb56-fj2pk  -n=rajesh
+ 1118  kubectl get pod -n=rajesh
+ 1119  clear
+ 1120  kubectl get pod -n=rajesh
+ 1121  kubectl describe pod my-dep-747b4ffb56-r2qjp -n=rajesh
+ 1122  clear
+ 1123  kubectl get rs n=rajesh
+ 1124  kubectl get rs - n=rajesh
+ 1125  kubectl get rs -n=rajesh
+ 1126  clear
+ 1127  kubectl scale -h
+ 1128  clear
+ 1129  kubectl get deploy -n=rajesh
+ 1130  kubectl scale --replicas=2 deployment/my-dep -n=rajesh
+ 1131  kubectl get deploy -n=rajesh
+ 1132  kubectl rollout -h
+ 1133  clear
+ 1134  kubectl rollout history deployment/my-dep -n=rajesh
+ 1135  kubectl get pods -n=rajesh -o wide
+ 1136  curl http://10.36.0.2
+ 1137  clear
+ 1138  kubectl edit deploy deployment/my-dep -n=rajesh
+ 1139  kubectl edit deployment/my-dep -n=rajesh
+ 1140  kubectl rollout history deployment/my-dep -n=rajesh
+ 1141  kubectl get pods -n=rajesh -o wide
+ 1142  curl http://10.44.0.2
+ 1143  clear
+ 1144  kubectl get pods -n=rajesh -o wide
+ 1145  curl http://10.44.0.2
+ 1146  curl http://10.44.0.1
+ 1147  history
+=====================================================================================
+
+Rollout
+Rollback
+
+kubectl create deployment my-dep --image=scmgalaxy/nginx-devopsschoolv1 --replicas=2 -n=rajesh
+kubectl rollout history deployment/my-dep -n=rajesh 
+kubectl rollout status deployment/my-dep -n=rajesh 
+kubectl get deploy -n=rajesh
+kubectl scale --replicas=15 deployment/my-dep -n=rajesh
+kubectl rollout status deployment/my-dep -n=rajesh 
+kubectl rollout history deployment/my-dep -n=rajesh 
+kubectl get deploy -n=rajesh
+kubectl get pod -n=rajesh -o wide
+curl http://ip
+
+kubectl edit deployment/my-dep -n=rajesh
+# TO scmgalaxy/nginx-devopsschoolv2
+
+kubectl rollout status deployment/my-dep -n=rajesh 
+kubectl rollout history deployment/my-dep -n=rajesh
+kubectl get deploy -n=rajesh
+kubectl get pod -n=rajesh -o wide
+curl http://ip
+
+kubectl rollout undo deployment/my-dep -n=rajesh --to-revision=1
+kubectl rollout status deployment/my-dep -n=rajesh
+kubectl get deploy -n=rajesh
+kubectl get pod -n=rajesh -o wide
+curl http://ip
+
+kubectl delete deploy my-dep -n=rajesh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
