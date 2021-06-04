@@ -44,6 +44,49 @@ https://github.com/openshift/openshift-jee-sample.git
 https://console.65.1.168.31.nip.io:8443/
 admin
 oZ10fli98a
+=====================================
+QA
+===========================================================
+
+Software - http://springpeople1-devopsschool.65.1.168.31.nip.io/ - 1 mins - 50 PODS
+
+Functional Testing - Seleniuum
+Perf Testing
+	IMAGE - jemeter -j SCRIPT - http://springpeople1-devopsschool.65.1.168.31.nip.io/ 
+==========================================================
+Resources:
+https://www.devopsschool.com/videos
+https://www.youtube.com/c/TheDevOpsSchool/channels
+https://www.devopsschool.com/lms/
+https://www.devopsschool.com/kit/master-in-devops-engineering.html
+
+http://www.rajeshkumar.xyz/
+
+Feedback link :
+https://tcheck.co/2nD7C7
+
+PFB – Post test link for Cloud Container & Microservices training.
+https://app.mymapit.in/code4/tiny/uqcb2Q
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
