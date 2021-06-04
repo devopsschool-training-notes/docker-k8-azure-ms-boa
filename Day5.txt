@@ -1,0 +1,49 @@
+PHYSICAL -> CLOUD   --> Container   --> Container Orch	---> Self Service
+	  ---------  -------------	--------------	    -------------
+	    Azure	 Docker		   kubernetes		OpenShift
+	    AWS
+
+
+=================================================================
+Monolithic -> SOA --> Microservices
+=========================================
+Waterfall -> Agile --> DevOps -> DevSecOps
+			----
+			SRE
+DevOps
+------------
+	Immediate release
+	Reduce a dev cost
+	Impro Qualility
+
+Resources:
+https://www.devopsschool.com/videos
+https://www.youtube.com/c/TheDevOpsSchool/channels
+https://www.devopsschool.com/lms/
+https://www.devopsschool.com/kit/master-in-devops-engineering.html
+
+https://devopsschool.com/pdf/
+https://devopsschool.com/slides/
+
+
+Service Mesh
+================================
+https://www.devopsschool.com/blog/list-of-top-service-mesh-implementation-tools-for-microservices-and-kubernetes/
+
+https://www.devopsschool.com/blog/service-mesh-data-plane-vs-control-plane/
+
+
+
+Sample - 
+
+https://github.com/Java-Techie-jt/spring-example
+https://github.com/openshift/openshift-jee-sample.git
+
+
+
+https://console.65.1.168.31.nip.io:8443/
+admin
+oZ10fli98a
+
+
+
